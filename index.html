@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Construction Platform Comparison</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .toolbar-note { color: #667067; font: 500 10px 'DM Mono', monospace; letter-spacing: .1em; text-transform: uppercase; }
+      .modules summary { cursor: default; pointer-events: none; }
+      .modules summary::after { display: none; }
+    </style>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Buildscope home">
+          <span class="brand-mark"><i></i><i></i><i></i></span>
+          <span>BUILDSCOPE</span>
+        </a>
+        <div class="header-meta">
+          <span class="status-dot"></span>
+          <span>COMPETITIVE LANDSCAPE</span>
+          <span class="meta-divider"></span>
+          <span>2026</span>
+        </div>
+      </header>
+
+      <section class="hero" id="top">
+        <div>
+          <p class="eyebrow">Construction software intelligence</p>
+          <h1>Platform <em>comparison</em></h1>
+          <p class="intro">An at-a-glance view of what each construction platform covers across the project lifecycle.</p>
+        </div>
+        <div class="legend" aria-label="Legend">
+          <span><b class="legend-filled"></b> Documented capability</span>
+          <span><b class="legend-empty"></b> Add competitor data</span>
+        </div>
+      </section>
+
+      <section class="toolbar" aria-label="Comparison controls">
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.5 4.5"></path></svg>
+          <input id="search" type="search" placeholder="Filter capabilities..." aria-label="Filter capabilities" />
+        </div>
+        <span class="toolbar-note">All capabilities shown</span>
+      </section>
+
+      <section class="comparison-grid" aria-label="Construction platform comparison">
+        <article class="platform-card procore-card">
+          <div class="card-header">
+            <div>
+              <p class="column-number">01 / MARKET LEADER</p>
+              <h2>Procore</h2>
+            </div>
+            <span class="company-icon" aria-hidden="true">P</span>
+          </div>
+          <p class="card-summary">Unified construction management platform spanning preconstruction, execution, finance and resources.</p>
+          <div class="coverage"><span>7 capability groups</span><b>Complete</b></div>
+          <div class="modules" id="procoreModules">
+            <details open>
+              <summary><span><b>01</b> Preconstruction</span><em>2</em></summary>
+              <div class="module-body">
+                <div class="feature"><h3>Bid Management</h3><p>Distributes bid information, collects bids, and tracks bid coverage in one place—saving manual email and paperwork.</p></div>
+                <div class="feature"><h3>Prequalification</h3><p>Checks subcontractor eligibility, financial stability, and safety record before a project award.</p></div>
+              </div>
+            </details>
+            <details>
+              <summary><span><b>02</b> Project Execution</span><em>7</em></summary>
+              <div class="module-body">
+                <div class="feature"><h3>RFI Management</h3><p>Raises and tracks clarifications on drawings or specifications, including responsible responder and due date.</p></div>
+                <div class="feature"><h3>Submittals</h3><p>Digitally manages material and product approvals with architects and engineers.</p></div>
+                <div class="feature"><h3>Document Management</h3><p>Centralizes drawings, contracts, specifications, and photos with version control.</p></div>
+                <div class="feature"><h3>Punch Lists</h3><p>Assigns and monitors outstanding fixes through project closeout.</p></div>
+                <div class="feature"><h3>Quality &amp; Safety</h3><p>Supports inspections, compliance checks, and near-miss incident logging.</p></div>
+                <div class="feature"><h3>Design Coordination / BIM</h3><p>Delivers 3D models, field BIM data, and clash detection to mobile teams.</p></div>
+                <div class="feature"><h3>Scheduling</h3><p>Tracks timelines and milestones, with Microsoft Project and Primavera P6 integrations.</p></div>
+              </div>
+            </details>
+            <details>
+              <summary><span><b>03</b> Cost Management</span><em>5</em></summary>
+              <div class="module-body">
+                <div class="feature"><h3>Budget</h3><p>Configurable real-time budgets designed to prevent profit erosion.</p></div>
+                <div class="feature"><h3>Project Financials</h3><p>Provides real-time visibility into project financial health and risk.</p></div>
+                <div class="feature"><h3>Invoice Management</h3><p>Digitizes invoice processing, approval, and tracking.</p></div>
+                <div class="feature"><h3>Change Order Management</h3><p>Documents scope changes and related costs to control scope creep.</p></div>
+                <div class="feature"><h3>Accounting Integrations</h3><p>Connects with Sage, QuickBooks, and other accounting systems to avoid duplicate entry.</p></div>
+              </div>
+            </details>
+            <details>
+              <summary><span><b>04</b> Resource Management</span><em>3</em></summary>
+              <div class="module-body">
+                <div class="feature"><h3>Field Productivity Tracking</h3><p>Measures work output and crew efficiency to improve labor allocation.</p></div>
+                <div class="feature"><h3>Resource Tracking &amp; Planning</h3><p>Forecasts and deploys labor, equipment, and materials across portfolios.</p></div>
+                <div class="feature"><h3>Time Tracking</h3><p>Records worker hours for payroll and cost tracking.</p></div>
+              </div>
+            </details>
+            <details>
+              <summary><span><b>05</b> Analytics &amp; Reporting</span><em>1</em></summary>
+              <div class="module-body"><div class="feature"><h3>Unified Reporting</h3><p>Uses pre-built or custom reports to unite cost, schedule, safety, and quality data.</p></div></div>
+            </details>
+            <details>
+              <summary><span><b>06</b> Procore AI</span><em>4</em></summary>
+              <div class="module-body">
+                <div class="feature"><h3>Datagrid</h3><p>A data-unification layer for connected project information.</p></div>
+                <div class="feature"><h3>18+ AI Agents</h3><p>Supports RFI drafting, submittal review, and discrepancy detection.</p></div>
+                <div class="feature"><h3>Agentic APIs</h3><p>Lets teams build custom agents for their workflows.</p></div>
+                <div class="feature"><h3>90+ Connectors</h3><p>Connects the platform to the existing technology stack.</p></div>
+              </div>
+            </details>
+            <details>
+              <summary><span><b>07</b> Platform Features</span><em>3</em></summary>
+              <div class="module-body">
+                <div class="feature"><h3>App Marketplace</h3><p>Offers 500+ third-party integrations through partner applications.</p></div>
+                <div class="feature"><h3>Mobile App</h3><p>Gives field teams iOS and Android access to RFIs, punch lists, and inspections.</p></div>
+                <div class="feature"><h3>Developer API</h3><p>Enables custom tools and integrations built on Procore data.</p></div>
+              </div>
+            </details>
+          </div>
+        </article>
+
+        <article class="platform-card placeholder-card">
+          <div class="card-header"><div><p class="column-number">02 / COMPETITOR</p><h2>Platform 02</h2></div><span class="company-icon neutral" aria-hidden="true">02</span></div>
+          <p class="card-summary">Add the next competitor to compare its product coverage against Procore.</p>
+          <div class="empty-state"><span class="plus">+</span><h3>Awaiting research</h3><p>Enter a product name and source link to build this profile.</p><button type="button" class="add-data">Add competitor data</button></div>
+        </article>
+        <article class="platform-card placeholder-card">
+          <div class="card-header"><div><p class="column-number">03 / COMPETITOR</p><h2>Platform 03</h2></div><span class="company-icon neutral" aria-hidden="true">03</span></div>
+          <p class="card-summary">Map another platform’s strengths, feature gaps, and integration coverage.</p>
+          <div class="empty-state"><span class="plus">+</span><h3>Awaiting research</h3><p>Enter a product name and source link to build this profile.</p><button type="button" class="add-data">Add competitor data</button></div>
+        </article>
+        <article class="platform-card placeholder-card">
+          <div class="card-header"><div><p class="column-number">04 / COMPETITOR</p><h2>Platform 04</h2></div><span class="company-icon neutral" aria-hidden="true">04</span></div>
+          <p class="card-summary">Use this column to complete your final side-by-side comparison.</p>
+          <div class="empty-state"><span class="plus">+</span><h3>Awaiting research</h3><p>Enter a product name and source link to build this profile.</p><button type="button" class="add-data">Add competitor data</button></div>
+        </article>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
