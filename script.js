@@ -1,5 +1,5 @@
 const search = document.querySelector('#search');
-const details = [...document.querySelectorAll('.modules details')];
+const details = [...document.querySelectorAll('.modules > details')];
 details.forEach((group) => { group.open = true; });
 
 search.addEventListener('input', (event) => {
