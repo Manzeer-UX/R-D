@@ -50,8 +50,15 @@
         <span class="toolbar-note">All capabilities shown</span>
       </section>
 
+      <nav class="platform-tabs" role="tablist" aria-label="Construction platforms">
+        <button class="platform-tab is-active" id="tab-procore" type="button" role="tab" aria-selected="true" aria-controls="panel-procore">Procore</button>
+        <button class="platform-tab" id="tab-buildots" type="button" role="tab" aria-selected="false" aria-controls="panel-buildots" tabindex="-1">Buildots</button>
+        <button class="platform-tab" id="tab-platform-03" type="button" role="tab" aria-selected="false" aria-controls="panel-platform-03" tabindex="-1">Platform 03</button>
+        <button class="platform-tab" id="tab-platform-04" type="button" role="tab" aria-selected="false" aria-controls="panel-platform-04" tabindex="-1">Platform 04</button>
+      </nav>
+
       <section class="comparison-grid" aria-label="Construction platform comparison">
-        <article class="platform-card procore-card">
+        <article class="platform-card procore-card" id="panel-procore" role="tabpanel" aria-labelledby="tab-procore">
           <div class="card-header">
             <div>
               <p class="column-number">01 / MARKET LEADER</p>
@@ -181,17 +188,81 @@
           </div>
         </article>
 
-        <article class="platform-card placeholder-card">
-          <div class="card-header"><div><p class="column-number">02 / COMPETITOR</p><h2>Platform 02</h2></div><span class="company-icon neutral" aria-hidden="true">02</span></div>
-          <p class="card-summary">Add the next competitor to compare its product coverage against Procore.</p>
-          <div class="empty-state"><span class="plus">+</span><h3>Awaiting research</h3><p>Enter a product name and source link to build this profile.</p><button type="button" class="add-data">Add competitor data</button></div>
+        <article class="platform-card" id="panel-buildots" role="tabpanel" aria-labelledby="tab-buildots" hidden>
+          <div class="card-header"><div><p class="column-number">02 / COMPETITOR</p><h2>Buildots</h2></div><span class="company-icon neutral" aria-hidden="true">B</span></div>
+          <p class="card-summary">AI-powered construction progress tracking, site intelligence, and delivery control for project teams.</p>
+          <div class="coverage"><span>6 capability groups</span><b>Complete</b></div>
+          <div class="modules" id="buildotsModules">
+            <details open>
+              <summary><span><b>01</b> Site Capture &amp; Progress Tracking</span><em>4</em></summary>
+              <div class="module-body">
+                <div class="feature"><h3>AI progress tracking</h3><p>Compares site captures with BIM and the schedule to track installed work at activity and element level, including unmodelled areas.</p></div>
+                <div class="feature"><h3>360° site capture</h3><p>Uses 360 cameras and can also ingest drone imagery and laser scans.</p></div>
+                <div class="feature"><h3>Drone-based tracking</h3><p>Tracks early-stage work such as underground utilities, as well as concrete, steel, and floor progress.</p></div>
+                <div class="feature"><h3>BIM and schedule comparison</h3><p>Matches real site conditions to the 3D model and plan to identify actual progress, missed sequence, and risk.</p></div>
+              </div>
+            </details>
+            <details>
+              <summary><span><b>02</b> Progress Visibility</span><em>5</em></summary>
+              <div class="module-body">
+                <div class="feature"><h3>Progress dashboard / timeline</h3><p>Gives an at-a-glance view of project status: complete, in progress, or at risk.</p></div>
+                <div class="feature"><h3>Detailed drill-down</h3><p>Lets users inspect progress by activity, trade, area, or individual element.</p></div>
+                <div class="feature"><h3>Remote site explorer</h3><p>Creates a visual record of the site so teams can inspect conditions remotely.</p></div>
+                <div class="feature"><h3>Historical site documentation</h3><p>Records what was built and when; users can compare current conditions with earlier captures or the BIM model.</p></div>
+                <div class="feature"><h3>Measurement tools</h3><p>Enables distance measurement and close inspection of site elements from captured data.</p></div>
+              </div>
+            </details>
+            <details>
+              <summary><span><b>03</b> Forecasting &amp; Recovery</span><em>4</em></summary>
+              <div class="module-body">
+                <div class="feature"><h3>Delay Forecast</h3><p>AI predicts activities at risk of delay weeks in advance, allowing teams to change pace or reallocate resources.</p></div>
+                <div class="feature"><h3>Root-cause analysis</h3><p>Helps identify why delivery or productivity is falling behind, rather than only showing that a delay exists.</p></div>
+                <div class="feature"><h3>Recovery planning</h3><p>Models mitigation and recovery options using planned, actual, and required pace.</p></div>
+                <div class="feature"><h3>Trade management</h3><p>Monitors each trade’s production against required pace, assesses performance, and estimates the labor needed to meet targets.</p></div>
+              </div>
+            </details>
+            <details>
+              <summary><span><b>04</b> Quality &amp; Issue Control</span><em>3</em></summary>
+              <div class="module-body">
+                <div class="feature"><h3>Deviation detection</h3><p>Automatically finds work that differs from the BIM model as soon as it is built, reducing late discovery and rework.</p></div>
+                <div class="feature"><h3>Loose-end detection</h3><p>Identifies incomplete installations, centralizes them, assigns deadlines, shares them with trades, and tracks closure.</p></div>
+                <div class="feature"><h3>Issue export / integration</h3><p>Issues can be resolved in Buildots or exported to Procore, Autodesk Forma, and Revizto.</p></div>
+              </div>
+            </details>
+            <details>
+              <summary><span><b>05</b> Commercial, Data &amp; Security</span><em>4</em></summary>
+              <div class="module-body">
+                <div class="feature"><h3>Payment-application verification</h3><p>Verifies installed quantities and percentage complete by trade, task, or area to support valuations and payment applications.</p></div>
+                <div class="feature"><h3>Portfolio visibility</h3><p>Supports unlimited projects and standardised reporting across a capital programme or portfolio.</p></div>
+                <div class="feature"><h3>Data Connector</h3><p>Consolidates progress information with scheduling, financial, and operational data from existing workflows.</p></div>
+                <div class="feature"><h3>Security</h3><p>States SOC 2 Type II, ISO 27001, and GDPR compliance, with MFA and SSO.</p></div>
+              </div>
+            </details>
+            <details>
+              <summary><span><b>06</b> Customer Stories: Business Problems</span><em>11</em></summary>
+              <div class="module-body case-studies">
+                <p class="section-note">Business problems reported in Buildots customer stories. Select a company to open its source story.</p>
+                <div class="feature"><h3><a href="https://buildots.com/case-studies/intel-partners-with-buildots/" target="_blank" rel="noopener noreferrer">Intel <span>↗</span></a></h3><p>Its multi-fab programme had to control more than 50,000 activities, prevent revenue-critical delays, reduce installation deviations and rework, keep as-built models accurate, and transfer learning between sites.</p></div>
+                <div class="feature"><h3><a href="https://buildots.com/case-studies/je-dunn-partners-with-buildots/" target="_blank" rel="noopener noreferrer">JE Dunn <span>↗</span></a></h3><p>On a high-rise residential project, it needed to move beyond basic quality checks, spot delay risks early, coordinate expectations with trade partners, and replace fragmented manual photo walkthroughs.</p></div>
+                <div class="feature"><h3><a href="https://buildots.com/case-studies/srm-partners-with-buildots/" target="_blank" rel="noopener noreferrer">Sir Robert McAlpine <span>↗</span></a></h3><p>Manual, subjective progress reporting limited site transparency, efficiency and trade collaboration, while potential delay risks needed earlier, more reliable identification.</p></div>
+                <div class="feature"><h3><a href="https://buildots.com/case-studies/mbn-partners-with-buildots/" target="_blank" rel="noopener noreferrer">MBN <span>↗</span></a></h3><p>Its Lean schedule relied on subjective updates from subcontractors and project managers, creating resource inefficiencies and making detailed site inspection difficult.</p></div>
+                <div class="feature"><h3><a href="https://buildots.com/case-studies/ncc-finland-case-study/" target="_blank" rel="noopener noreferrer">NCC Finland <span>↗</span></a></h3><p>Subjective reports led to reactive firefighting; teams needed clearer progress visibility, earlier discrepancy resolution, better design coordination, and stronger trade productivity and accountability.</p></div>
+                <div class="feature"><h3><a href="https://buildots.com/case-studies/ecoworld-partners-with-buildots/" target="_blank" rel="noopener noreferrer">EcoWorld London <span>↗</span></a></h3><p>A window-installation subcontractor was falling behind, threatening the critical watertight milestone and causing a potential domino effect on the delivery schedule.</p></div>
+                <div class="feature"><h3><a href="https://buildots.com/case-studies/multiplex-partners-with-buildots/" target="_blank" rel="noopener noreferrer">Multiplex <span>↗</span></a></h3><p>Complex high-rise work required accurate subcontractor-progress tracking, better coordination and reliable reporting; traditional methods were time-consuming and did not show the true project status.</p></div>
+                <div class="feature"><h3><a href="https://buildots.com/case-studies/ncc-partners-with-buildots/" target="_blank" rel="noopener noreferrer">NCC <span>↗</span></a></h3><p>Project managers lacked measured visibility of progress and trade activity, making prioritisation, subcontractor accountability and plan adjustment difficult; unidentified issues threatened critical paths.</p></div>
+                <div class="feature"><h3><a href="https://buildots.com/case-studies/ihp-partners-with-buildots/" target="_blank" rel="noopener noreferrer">IHP <span>↗</span></a></h3><p>Its publicly funded hospital project involved complex delivery and many stakeholders, creating pressure to improve communication and reduce risk to the programme timeline.</p></div>
+                <div class="feature"><h3><a href="https://buildots.com/case-studies/wates-park-east-video/" target="_blank" rel="noopener noreferrer">Wates Residential <span>↗</span></a></h3><p>At Park East, it sought stronger site visibility, control and efficiency, including fact-based trade discussions, earlier issue resolution to avoid delays, and accessible site documentation.</p></div>
+                <div class="feature"><h3><a href="https://buildots.com/case-studies/per-aarsleff-partners-with-buildots/" target="_blank" rel="noopener noreferrer">Per Aarsleff <span>↗</span></a></h3><p>Needed to address incomplete work before it disrupted delivery, improve stakeholder collaboration and subcontractor accountability, and resolve poorly documented claims that could become costly disputes.</p></div>
+              </div>
+            </details>
+          </div>
         </article>
-        <article class="platform-card placeholder-card">
+        <article class="platform-card placeholder-card" id="panel-platform-03" role="tabpanel" aria-labelledby="tab-platform-03" hidden>
           <div class="card-header"><div><p class="column-number">03 / COMPETITOR</p><h2>Platform 03</h2></div><span class="company-icon neutral" aria-hidden="true">03</span></div>
           <p class="card-summary">Map another platform’s strengths, feature gaps, and integration coverage.</p>
           <div class="empty-state"><span class="plus">+</span><h3>Awaiting research</h3><p>Enter a product name and source link to build this profile.</p><button type="button" class="add-data">Add competitor data</button></div>
         </article>
-        <article class="platform-card placeholder-card">
+        <article class="platform-card placeholder-card" id="panel-platform-04" role="tabpanel" aria-labelledby="tab-platform-04" hidden>
           <div class="card-header"><div><p class="column-number">04 / COMPETITOR</p><h2>Platform 04</h2></div><span class="company-icon neutral" aria-hidden="true">04</span></div>
           <p class="card-summary">Use this column to complete your final side-by-side comparison.</p>
           <div class="empty-state"><span class="plus">+</span><h3>Awaiting research</h3><p>Enter a product name and source link to build this profile.</p><button type="button" class="add-data">Add competitor data</button></div>
